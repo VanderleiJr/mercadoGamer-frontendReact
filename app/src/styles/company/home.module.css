@@ -58,6 +58,11 @@ body {
     background-color: yellowgreen;
     height: 5%;
     padding: 1em;
+    color: #ffffff;
+    position: relative;
+    text-align: center;
+    font-size: 150%;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .footer2{

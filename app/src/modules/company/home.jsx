@@ -34,7 +34,7 @@ export default class HomeCompany extends Component {
         })
 
         if(response.status === 204){
-            this.listOrders.push(<p>Você não tem nenhum pedido!</p>)
+            //this.listOrders.push(<p>Você não tem nenhum pedido!</p>)
         } else {
             response.data.forEach(data_item => {
                 this.setState({game_code: data_item.game_code, amount: data_item.amount, customer_cpf: data_item.customer_cpf})
@@ -51,7 +51,7 @@ export default class HomeCompany extends Component {
         })
 
         if(response.status === 204){
-            this.listProducts.push(<p>Seu stock está vazio!</p>)
+            //this.listProducts.push(<p>Seu stock está vazio!</p>)
         } else {
             response.data.forEach(data_item => {
                 this.setState({product_code: data_item.product_code, s_amount: data_item.amount})
@@ -77,8 +77,8 @@ export default class HomeCompany extends Component {
         return (
             <div>
                 <div id="full_header" className={home.container}>
-                    <header>{this.state.name} - Página Inicial Empresarial</header><br/>
-                    <button type="button" onclick={this.logout()} id="botao_logout">🚪</button>
+                    <div className={home.header2}>{this.state.name} - Página Inicial Empresarial</div><br/>
+                    <button type="button" onClick={this.logout} id="botao_logout">🚪</button>
                 </div>
             
                 <div className={home.container} id="main_container">
